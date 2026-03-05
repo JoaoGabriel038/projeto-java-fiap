@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
-public class produto {
+public class Produto {
 
     private Long id;
 
@@ -18,10 +18,10 @@ public class produto {
 
     private Categoria categoria;
 
-    public produto() {
+    public Produto() {
     }
 
-    public produto(Long id, String nome, String descricao, BigDecimal preco, LocalDateTime dataDeCadastro, Categoria categoria) {
+    public Produto(Long id, String nome, String descricao, BigDecimal preco, LocalDateTime dataDeCadastro, Categoria categoria) {
         this.setId(id);
         this.setNome(nome);
         this.setDescricao(descricao);
@@ -30,7 +30,7 @@ public class produto {
         this.setCategoria(categoria);
     }
 
-    public produto(String nome, String descricao, BigDecimal preco, LocalDateTime dataDeCadastro, Categoria categoria) {
+    public Produto(String nome, String descricao, BigDecimal preco, LocalDateTime dataDeCadastro, Categoria categoria) {
         this.setNome(nome);
         this.setDescricao(descricao);
         this.setPreco(preco);
@@ -90,7 +90,7 @@ public class produto {
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
-        produto produto = (produto) o;
+        Produto produto = (Produto) o;
         return Objects.equals(id, produto.id);
     }
 
